@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <button class="btn">Red</button>
+        <button class="btn">Yellow</button>
+        <button class="btn">Blue</button>
+        <button class="btn">Orange</button>
+    </div>
+    <script>
+          const check = document.querySelectorAll('.btn');
+          check.forEach((p)=>p.addEventListener('click' , (e)=>{
+                  console.log(p.innerHTML);
+                document.body.style.background = `${p.innerHTML}`
+          }))
+    </script>
+</body>
+</html>

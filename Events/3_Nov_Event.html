@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background: #414141; color: #ffff;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            
+        </ul>
+    </div>
+    <li><a style="color: aliceblue;" href="https://google.com" id="google" class="google">Google</a></li>
+    <script>
+    //     // Use addEventListener
+    //     document.getElementById('images').addEventListener('click' , (e) =>{
+    //         e.preventDefault();
+    //        alert('All Images Clicked')
+    //     }, )
+
+    //   const a =  document.getElementById('japan');
+    //   a.addEventListener('click' , (e) =>{
+    //       console.log(e);
+    //       alert('Japan clicked')
+    //       e.stopPropagation();       // stop propagation use for stop the event bubbling
+    //   },)
+
+           document.querySelector('#images').addEventListener('click' , (e)=>{
+             console.log(e.target.tagName);
+              if(e.target.tagName === 'IMG'){
+                let removeit = e.target.parentNode
+                removeit.remove();
+              }
+           })
+
+           document.querySelector('.google').addEventListener('click' , (e)=>{
+             e.preventDefault();
+             console.log("Google Clicked")
+           })
+    </script>
+</body>
+</html>

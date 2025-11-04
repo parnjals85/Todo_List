@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color-btn{
+            width: 60px;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <button id="color-red"  class="color-btn">Red</button>
+    <button id="color-yellow" class="color-btn">yellow</button>
+    <button id="color-pink" class="color-btn">Pink</button>
+    <script>const colorBtn = document.querySelectorAll('.color-btn');
+ 
+colorBtn.forEach((ele)=>ele.addEventListener("click",(e)=>{
+    console.log(ele.innerHTML);
+    
+    document.body.style.background = `${ele.innerHTML}`;
+}))</script>
+</body>
+</html>
+ 

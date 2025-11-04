@@ -42,7 +42,7 @@ function validateGuess(guess){
     }
 }
 // ✅ Compare user guess with random number
-function checkguess(guess){       // Confusion the User like 
+function checkguess(guess){       // Confusion the User like
   if(guess === randomnumber){
     displaymessage(`Yeah You Guessed Right ${randomnumber}`);
     endgame();

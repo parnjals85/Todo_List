@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    <h1>KeyBoard Event Project !!</h1>
+    <button id="key">Press_Here</button>
+    <h1 id="Output">Press Any Key....</h1>
+    <script>
+    document.addEventListener('keydown' , (e)=>{
+        document.getElementById('Output').textContent = `your Pressed ${e.key}`;
+    })
+    </script>
+</body>
+</html>
